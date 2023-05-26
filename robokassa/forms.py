@@ -92,7 +92,7 @@ class RobokassaForm(BaseRobokassaForm):
             val = self.initial.get(name, field.initial)
             if not val:
                 return val
-            return unicode(val).encode('1251')
+            return unicode(val).encode('utf-8')
 
         fields = [(name, _initial(name, field))
                   for name, field in self.fields.items()
